@@ -51,6 +51,7 @@ function App() {
   const { profile, skills, experience, volunteer, projects } = portfolioData;
   const [theme, setTheme] = useState("strawberry");
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
 
   // Sync theme selection to document body
   useEffect(() => {
@@ -98,6 +99,26 @@ function App() {
       startCozyMusic();
     }
     setIsMusicPlaying(!isMusicPlaying);
+  };
+
+  const handleEmailClick = (e) => {
+    e.preventDefault();
+    playBubble();
+    const emailAddress = "ttarishee@gmail.com";
+    navigator.clipboard.writeText(emailAddress)
+      .then(() => {
+        setToastMessage("Email copied to clipboard! 🐾");
+      })
+      .catch(() => {
+        setToastMessage("Could not copy email, opening mail client... 🐾");
+      })
+      .finally(() => {
+        setTimeout(() => setToastMessage(""), 3000);
+        // Fallback option to open mail client after a small delay
+        setTimeout(() => {
+          window.location.href = `mailto:${emailAddress}`;
+        }, 300);
+      });
   };
 
   return (
@@ -172,7 +193,7 @@ function App() {
               <a href={profile.socials.linkedin} target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="LinkedIn">
                 <LinkedinIcon size={20} />
               </a>
-              <a href={profile.socials.email} className="social-icon-btn" title="Email">
+              <a href={profile.socials.email} onClick={handleEmailClick} className="social-icon-btn" title="Email">
                 <Mail size={20} />
               </a>
             </div>
@@ -241,7 +262,7 @@ function App() {
           <a href={profile.socials.github} target="_blank" rel="noopener noreferrer" className="social-icon-btn" title="GitHub">
             <GithubIcon size={20} />
           </a>
-          <a href={profile.socials.email} className="social-icon-btn" title="Email">
+          <a href={profile.socials.email} onClick={handleEmailClick} className="social-icon-btn" title="Email">
             <Mail size={20} />
           </a>
         </div>
@@ -249,6 +270,9 @@ function App() {
           Made with <Heart size={12} fill="var(--primary-color)" stroke="none" /> by Tanmana.
         </p>
       </footer>
+      <div className={`toast-notification ${toastMessage ? "show" : ""}`}>
+        <span>{toastMessage}</span>
+      </div>
     </div>
     </ThemeContext.Provider>
   );

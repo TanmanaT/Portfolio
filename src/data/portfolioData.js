@@ -2,7 +2,7 @@ export const portfolioData = {
   profile: {
     name: "Tanmana Tarishee",
     title: "AI & Machine Learning Enthusiast",
-    subtitle: "Ex-AI Research Intern @ NIELIT | NSS Volunteer | CSE @ KIIT’27",
+    subtitle: "Ex Intern @ IIT & NIELIT | NSS Volunteer | CSE @ KIIT’27",
     avatar: "/src/assets/hero.jpeg",
     about: "Hi! I’m a BTech CSE student at KIIT, passionate about Web Development, AI/ML. I'm currently learning JavaScript, React, and full-stack development. I also have a strong foundation in Python, Java, SQL, and am improving my DSA skills. I enjoy building tech solutions, exploring new tools, and connecting with like-minded people to grow and share knowledge.",
     status: "Learning React & building cool things! 🚀",
@@ -10,7 +10,6 @@ export const portfolioData = {
       github: "https://github.com/TanmanaT",
       linkedin: "https://www.linkedin.com/in/tanmana-tarishee-9277b0338",
       email: "mailto:ttarishee@gmail.com",
-      twitter: "https://twitter.com"
     }
   },
   skills: [
@@ -31,7 +30,7 @@ export const portfolioData = {
   ],
   experience: [
     {
-      role: "Research Intern",
+      role: "Intern",
       company: "Indian Institute of Technology, Guwahati",
       type: "Internship",
       duration: "May 2026 - June 2026",
@@ -70,19 +69,20 @@ export const portfolioData = {
       featured: true
     },
     {
-      title: "SmartLeave",
-      category: "Web Dev",
-      description: "A web-based Leave Management System designed to simplify leave application and approval processes in educational institutions through role-based access control.",
-      tags: ["Java", "JSP", "MySQL", "JDBC", "Servlet"],
-      link: "https://github.com/TanmanaT/SmartLeave",
+      title: "Sand Mining Detection",
+      category: ["AI/ML", "Web Dev"],
+      description: "An AI/ML powered Sand Mining Detection system featuring real-time detection along riverbeds using UAV drones, paired with an interactive web dashboard for monitoring.",
+      tags: ["Python", "YOLOv8", "UAV Drones", "Flask", "React Dashboard"],
+      link: "https://github.com/TanmanaT/Sand-Mining_Detection",
+      demoLink: "https://sandmining-dashboard.nielitbhubaneswar.in/login",
       featured: true
     },
     {
-      title: "R2R Financial Analysis",
+      title: "Agrivision",
       category: "AI/ML",
-      description: "A financial data analysis tool simulating the Record-to-Report (R2R) process using Python and sales datasets to perform data cleaning, regional profit profiling, and customer trend reporting.",
-      tags: ["Python", "Pandas", "Matplotlib", "Seaborn", "Jupyter"],
-      link: "https://github.com/TanmanaT/R2R-Financial-Analysis",
+      description: "An AI-powered computer vision system designed for smart agriculture, utilizing deep learning architectures for anomaly detection in fields using satellite imagery.",
+      tags: ["Python", "PyTorch", "Satellite Imagery", "CNN", "Deep Learning"],
+      link: "https://github.com/TanmanaT/agrivision",
       featured: true
     }
   ]
