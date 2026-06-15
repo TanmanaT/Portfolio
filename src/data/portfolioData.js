@@ -1,9 +1,11 @@
+import heroAvatar from "../assets/hero.jpeg";
+
 export const portfolioData = {
   profile: {
     name: "Tanmana Tarishee",
     title: "AI & Machine Learning Enthusiast",
     subtitle: "Ex Intern @ IIT & NIELIT | NSS Volunteer | CSE @ KIIT’27",
-    avatar: "src\assets\hero.jpeg",
+    avatar: heroAvatar,
     about: "Hi! I’m a BTech CSE student at KIIT, passionate about Web Development, AI/ML. I'm currently learning JavaScript, React, and full-stack development. I also have a strong foundation in Python, Java, SQL, and am improving my DSA skills. I enjoy building tech solutions, exploring new tools, and connecting with like-minded people to grow and share knowledge.",
     status: "Learning React & building cool things! 🚀",
     socials: {
